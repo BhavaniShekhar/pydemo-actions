@@ -1,5 +1,17 @@
+from flask import Flask
+
+
+app = Flask(__name__)
+
+
+@app.get("/")
+def home():
+    return "Hello, Vybhava World!"
+
+
 def add(a, b):
     return a + b
 
+
 if __name__ == "__main__":
-    print(add(2, 3))
+    app.run()
